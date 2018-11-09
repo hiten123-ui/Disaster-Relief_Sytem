@@ -1,0 +1,60 @@
+html
+  title HelpNSave
+  meta(charset='utf-3')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js')
+  nav.navbar.navbar-expand-sm.bg-dark.navbar-dark
+    a.navbar-brand(href='/') HelpNSave
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#collapsibleNavbar')
+      span.navbar-toggler-icon
+    #collapsibleNavbar.collapse.navbar-collapse
+      ul.navbar-nav
+        li.nav-item
+          a.nav-link(href='about') ABOUT
+        li.nav-item
+          a.nav-link(href='area') AREAS
+      ul.navbar-nav.ml-auto
+        li.nav-item
+          a.nav-link(href='login') Login
+  #demo.carousel.slide(data-ride='carousel')
+    ul.carousel-indicators
+      li.active(data-target='#demo', data-slide-to='0')
+      li(data-target='#demo', data-slide-to='1')
+      li(data-target='#demo', data-slide-to='2')
+    .carousel-inner
+      .carousel-item.active
+        img(src='/images/Main_bg1.jpg', alt='Ask For Help', width='100%', height='500px')
+        .carousel-caption
+          .bg-dark.text-white
+            h3 Join The Movement
+            p Come forward and contribute in each and every possible way
+      .carousel-item
+        img(src='/images/Main_bg2.jpg', alt='Ask For Help', width='100%', height='500px')
+        .carousel-caption
+          h3 Ask For Help
+          p If you are in need of any kind of support Register
+      .carousel-item
+        img(src='/images/Main_bg3.jpg', alt='New York', width='100%', height='500px')
+        .carousel-caption
+          h3 Community Support
+          p Intercommunication between both
+    a.carousel-control-prev(href='#demo', data-slide='prev')
+      span.carousel-control-prev-icon
+    a.carousel-control-next(href='#demo', data-slide='next')
+      span.carousel-control-next-icon
+  .container
+    .about-heading-content
+      .row
+        .col-xl-9.col-lg-10.mx-auto
+          .bg-faded.rounded.p-5
+            h2.section-heading.mb-4
+              | About Us
+            p
+              | Founded in 2018 at BITS Pilani, Hyderabad Camous, our establishment has been trying to connect those who are willing to help and to those who are in need of help.
+            p.mb-0
+              | A large number of people have received aid through and a lot many NGOs and organisations are registered with us and working actively in the region that we specify.
+  .jumbotron.text-center(style='margin-bottom:0')
+    p Help and Save

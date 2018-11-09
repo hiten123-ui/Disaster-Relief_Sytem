@@ -1,0 +1,103 @@
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    link(rel='apple-touch-icon', sizes='76x76', href='/assets/img/apple-icon.png')
+    link(rel='icon', type='image/png', href='/assets/img/favicon.png')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    title
+      | Dashboard
+    meta(content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no', name='viewport')
+    link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css')
+    link(href='/assets/css/material-dashboard.css?v=2.1.0', rel='stylesheet')
+    link(href='/assets/demo/demo.css', rel='stylesheet')
+  body.dark-edition
+    .wrapper
+      .sidebar(data-color='purple', data-background-color='black', data-image='/assets/img/sidebar-2.jpg')
+        .sidebar-wrapper
+          ul.nav
+            li.nav-item
+              a.nav-link(href='/dashboard')
+                i.material-icons dashboard
+                p Dashboard
+            li.nav-item
+              a.nav-link(href='/dashboard/update-details')
+                i.material-icons library_books
+                p Upate Details
+            li.nav-item
+              a.nav-link(href='/dashboard/seek-help')
+                i.material-icons library_books
+                p Seek Help
+            li.nav-item
+              a.nav-link(href='/dashboard/provide-help')
+                i.material-icons bubble_chart
+                p Provide Help
+            li.nav-item
+               a.nav-link(href='/dashboard/logout')
+                i.material-icons bubble_chart
+                p Logout
+      .main-panel
+        .content
+          .container-fluid
+            .row
+              .col-md-8
+                .card
+                  .card-header.card-header-primary
+                    h4.card-title Update Details
+                  .card-body
+                    form(action="/dashboard/update-details" method="POST")
+                      .row
+                        .col-md-6
+                          .form-group
+                            label.bmd-label-floating Email address
+                            input.form-control(type='email', value=user.email disabled="true")
+                        .col-md-4
+                          .form-group
+                            label.bmd-label-floating Phone Number
+                            input.form-control#phone(type='number', name='phone')
+                      .row
+                        .col-md-12
+                          .form-group
+                            label.bmd-label-floating Name
+                            input.form-control(type='text', value=user.name disabled="true")
+                      .row
+                        .col-md-12
+                          .form-group
+                            label.bmd-label-floating Address
+                            input.form-control#address(type='text' name="address" )
+                      .row
+                        .col-md-4
+                          .form-group
+                            label.bmd-label-floating City
+                            input.form-control#city(type='text' name="city" )
+                        .col-md-4
+                          .form-group
+                            label.bmd-label-floating Country
+                            input.form-control#country(type='text' name="country" )
+                        .col-md-4
+                          .form-group
+                            label.bmd-label-floating Postal Code
+                            input.form-control#postal(type='number' name="postal")
+                      .row
+                        .col-md-12
+                          .form-group
+                            label Kind of Help I can provide
+                            .form-group
+                              textarea.form-control(rows='1')
+                            
+                      .row
+                        .col-md-12
+                          .form-group
+                            label Kind of Help I Need
+                            .form-group
+                              textarea.form-control(rows='1')
+                      button.btn.btn-primary.pull-right(type='submit') Update Details
+                      .clearfix
+              .col-md-4
+                .card.card-profile
+                  .card-avatar
+                  .card-body
+                    br
+                    h6.card-category Welcome
+                    h4.card-title
+                      |#{user.name}

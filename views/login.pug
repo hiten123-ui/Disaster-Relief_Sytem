@@ -1,0 +1,60 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Bootstrap Sign in Form with Facebook and Twitter Buttons
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    style(type='text/css').
+      .login-form {
+      width: 650px;
+      margin: 200px auto;
+      }
+      .social-btn .btn {
+      border: none;
+      font-size: 25px;
+      margin: 40px 30px 0;
+      opacity: 1;
+      }
+      .social-btn .btn:hover {
+      opacity: 0.9;
+      }
+      .social-btn .btn-primary {
+      background: #507cc0;
+      }
+      .social-btn .btn-info {
+      background: #64ccf1;
+      }
+      .social-btn .btn-danger {
+      background: #df4930;
+      }
+      .or-seperator {
+      margin-top: 200px;
+      text-align: center;
+      border-top: 1px solid #ccc;
+      }
+      .or-seperator i {
+      padding: 0 10px;
+      background: #f7f7f7;
+      position: relative;
+      top: -11px;
+      z-index: 1;
+      }
+  body
+    .login-form
+        p.text-center 
+          h1
+            b Login with your social media account
+        p.text-center.social-btn
+          a.btn.btn-danger(href='/login/google')
+            i.fa.fa-google
+            |   Google
+        p.text-center.social-btn
+          a.btn.btn-primary(href='/login/facebook')
+            i.fa.fa-facebook
+            |   Facebook
+

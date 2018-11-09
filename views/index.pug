@@ -1,0 +1,90 @@
+doctype html
+html(lang='en')
+  head
+    title HelpNSave
+    meta(charset='utf-3')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js')
+  body
+    nav.navbar.navbar-expand-sm.bg-dark.navbar-dark
+      a.navbar-brand(href='/') HelpNSave
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#collapsibleNavbar')
+        span.navbar-toggler-icon
+      #collapsibleNavbar.collapse.navbar-collapse
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(href='about') ABOUT
+          li.nav-item
+            a.nav-link(href='area') AREAS
+        ul.navbar-nav.ml-auto
+          li.nav-item
+            a.nav-link(href='login') Login
+    #demo.carousel.slide(data-ride='carousel')
+      ul.carousel-indicators
+        li.active(data-target='#demo', data-slide-to='0')
+        li(data-target='#demo', data-slide-to='1')
+        li(data-target='#demo', data-slide-to='2')
+      .carousel-inner
+        .carousel-item.active
+          img(src='/images/Main_bg1.jpg', alt='Ask For Help', width='100%', height='500px')
+          .carousel-caption
+            .bg-dark.text-white
+              h3 Join The Movement
+              p Come forward and contribute in each and every possible way
+        .carousel-item
+          img(src='/images/Main_bg2.jpg', alt='Ask For Help', width='100%', height='500px')
+          .carousel-caption
+            h3 Ask For Help
+            p If you are in need of any kind of support Register
+        .carousel-item
+          img(src='/images/Main_bg3.jpg', alt='New York', width='100%', height='500px')
+          .carousel-caption
+            h3 Community Support
+            p Intercommunication between both
+      a.carousel-control-prev(href='#demo', data-slide='prev')
+        span.carousel-control-prev-icon
+      a.carousel-control-next(href='#demo', data-slide='next')
+        span.carousel-control-next-icon
+    .text-center(style='margin-bottom:25px')
+      .container(style='margin-top:25px')
+        .text-dark(class='.bg-dark')
+          .row
+            .col-sm-4
+              h3 
+                b Come to Help
+              p
+                | All the organisations or NGOs working in the field of providing support or relief aid be it Financial or in rescue operations.
+              p
+                | Reach out to maximum number of people who are in need of help. Work with other organisations in the same area in order to maximise support. 
+              br
+              br
+              br
+              a.btn.btn-info(href='#', role='button') Register as Organisation
+            .col-sm-4
+              h3 
+                b Emergency
+              p
+                | If you are stuck somewhere and if you are waiting someone to help you immediately register her.
+              p
+                | We will forward your details to people near to you and organisatiosn working in your area.
+              br
+              br
+              br
+              br
+              br
+              br
+              a.btn.btn-info(href='#', role='button')   SOS(Only in case of emergency)
+            .col-sm-4
+              h3 
+                b Register
+              p
+                | If you live in a disaster prone area or you need some sort help  after post disatser trauma, you may register here.Financial aid,  Shelter for some time, resources, food or something else. You can ask for that here.
+              p
+                |All those people who are living in that area or can provide support in thagt area can also register using the same. A small contribution of yours can save a life.
+                b HELP NOW to all those in need.
+              a.btn.btn-info(href='#', role='button')   Register as Volunteer/Help Seeker
+    .jumbotron.text-center(style='margin-bottom:0')
+      p Help and Save
